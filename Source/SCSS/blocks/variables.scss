@@ -1,0 +1,45 @@
+// fonts
+
+@mixin text-light {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+@mixin text-regular {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+@mixin text-semiBold {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+@mixin subtitle {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+@mixin title {
+    font-family: 'SF Pro Display', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+@mixin main-title {
+    font-family: 'SF Pro Display', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+// Display-width
+
+$display-xs-min: 0;
+$display-sm-min: 576px;
+$display-sm-max: $display-sm-min - 1px;
+$display-md-min: 768px;
+$display-md-max: $display-md-min - 1px;
+$display-lg-min: 992px;
+$display-lg-max: $display-lg-min - 1px;
+$display-xl-min: 1200px;
+$display-xl-max: $display-xl-min - 1px;
+$display-xxl-min: 1400px;
+$display-xxl-max: $display-xxl-min - 1px;

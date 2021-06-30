@@ -1,0 +1,216 @@
+.description {
+    position: relative;
+
+    @media (max-width: $display-lg-max) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__picture {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        max-width: 667px;
+        transform: translate(50%, -30%);
+
+        @media (max-width: $display-lg-max) {
+            position: static;
+            max-width: none;
+            transform: none;
+        }
+    }
+
+    &__photo {
+        @media (max-width: $display-lg-max) {
+            max-width: 667px;
+            margin: 0 auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 400px;
+        padding-left: 30px;
+
+        @media (max-width: $display-lg-max) {
+            height: auto;
+            padding: 0;
+            margin-top: 40px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 34%;
+
+        @media (max-width: $display-lg-max) {
+            align-items: center;
+        }
+
+        &:first-child {
+            &::after {
+                position: absolute;
+                top: 7%;
+                right: -3%;
+                width: 229px;
+                height: 115px;
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='229' height='115' viewBox='0 0 229 115' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='223.692' cy='110.5' rx='5.30805' ry='4.5' transform='rotate(-180 223.692 110.5)' fill='%23C4C4C4'/%3E%3Cpath d='M220.901 107L94.8895 1H-8.49261e-07' stroke='%23C4C4C4' stroke-width='0.5'/%3E%3C/svg%3E");
+
+                @media (max-width: $display-lg-max) {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                position: absolute;
+                top: 7%;
+                left: -40%;
+                width: 258px;
+                height: 104px;
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='258' height='104' viewBox='0 0 258 104' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='4.45125' cy='99.3605' rx='4.45122' ry='4.31314' transform='rotate(-180 4.45125 99.3605)' fill='%23C4C4C4'/%3E%3Cpath d='M258 1H132.686L8.44862 96.9641' stroke='%23C4C4C4' stroke-width='0.5'/%3E%3C/svg%3E");
+
+                @media (max-width: $display-lg-max) {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            &::after {
+                position: absolute;
+                top: -51%;
+                left: 51%;
+                width: 346px;
+                height: 82px;
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='346' height='82' viewBox='0 0 346 82' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='342.193' cy='4.44377' rx='3.80685' ry='4.44368' transform='rotate(-180 342.193 4.44377)' fill='%23C4C4C4'/%3E%3Cpath d='M339.232 6.41881L94.6573 80.9739H-3.74317e-05' stroke='%23C4C4C4' stroke-width='0.5'/%3E%3C/svg%3E");
+
+                @media (max-width: $display-xl-max) {
+                    left: 40%;
+                }
+
+                @media (max-width: $display-lg-max) {
+                    display: none;
+                }
+            }
+        }
+
+        &:last-child {
+            &::after {
+                position: absolute;
+                top: -51%;
+                left: -3%;
+                width: 124px;
+                height: 90px;
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='124' height='90' viewBox='0 0 124 90' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse rx='4.21519' ry='4.5' transform='matrix(-1 0 0 1 4.21517 4.5)' fill='%23C4C4C4'/%3E%3Cpath d='M8 7L99.5 89H123.5' stroke='%23C4C4C4' stroke-width='0.5'/%3E%3C/svg%3E");
+            }
+
+            @media (max-width: $display-lg-max) {
+                display: none;
+            }
+        }
+
+        &:nth-child(1n+3) {
+            align-self: flex-end;
+
+            @media (max-width: $display-lg-max) {
+                align-self: auto;
+            }
+        }
+
+        &:nth-child(even) {
+            align-items: flex-end;
+
+            @media (max-width: $display-lg-max) {
+                align-items: inherit;
+            }
+        }
+    }
+
+    &__title {
+        @media (max-width: $display-lg-max) {
+            margin-top: 8vh;
+            font-size: 38px;
+        }
+    }
+
+    &__subtitle {
+        width: 100%;
+        max-width: 270px;
+        text-align: center;
+    }
+
+    &__text {
+        max-width: 270px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+// description-slider
+
+.description__slider {
+    &.slick-initialized {
+        & .slick-track {
+            display: flex;
+        }
+
+        & .slick-list {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        & .slick-slide {
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        & .slick-dots {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 10px 0 15px;
+
+            & button {
+                width: 12px;
+                height: 12px;
+                padding: 0;
+                font-size: 0;
+                cursor: pointer;
+                background-color: transparent;
+                border: 1px solid #fff;
+                border-radius: 100%;
+            }
+
+            & .slick-active button {
+                background-color: #fff;
+            }
+
+            & li + li {
+                margin-left: 10px;
+            }
+        }
+    }
+}

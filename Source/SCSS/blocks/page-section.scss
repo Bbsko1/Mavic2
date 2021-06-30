@@ -1,0 +1,61 @@
+.page-section {
+    position: relative;
+    height: 100vh;
+    padding: 50px 0;
+    background-image: url("../img/img/background@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+        background-image: url("../img/img/background@2x.jpg");
+    }
+
+    @media (max-width: $display-sm-max) {
+        background-position: 5% 50%;
+        background-size: cover;
+    }
+
+    &__scroll-button {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        z-index: 2;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        transform: translateX(-50%);
+
+        &:hover,
+        &:focus {
+            & g {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__title {
+        @include title;
+
+        margin: 0;
+        margin-bottom: 55px;
+        font-size: 44px;
+        line-height: 53px;
+    }
+
+    &__subtitle {
+        @include subtitle;
+
+        margin: 0;
+        margin-bottom: 12px;
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    &__text {
+        @include text-light;
+
+        font-size: 15px;
+        line-height: 23px;
+    }
+}

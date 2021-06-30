@@ -1,0 +1,20 @@
+.logo {
+    @include text-semiBold;
+
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 21px;
+
+    &__img {
+        width: 54px;
+        height: 27px;
+        margin-right: 12px;
+    }
+
+    &__text {
+        @media (max-width: $display-xl-max) {
+            display: none;
+        }
+    }
+}

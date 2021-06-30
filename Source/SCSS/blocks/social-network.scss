@@ -1,0 +1,24 @@
+.social-network {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link {
+        margin-top: 25px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+
+        & path {
+            transition: 0.3s;
+        }
+
+        &:hover,
+        &:focus {
+            & path {
+                fill-opacity: 1;
+            }
+        }
+    }
+}

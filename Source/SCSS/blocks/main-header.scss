@@ -1,0 +1,20 @@
+.main-header {
+    position: fixed;
+    top: 40px;
+    right: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1320px;
+    padding: 0 40px;
+    text-transform: uppercase;
+    transition: 1s;
+    transform: translateX(50%);
+
+    @media (max-width: $display-lg-max) {
+        padding: 0 20px;
+    }
+}

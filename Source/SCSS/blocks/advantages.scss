@@ -1,0 +1,274 @@
+.advantages {
+    height: auto;
+    min-height: 100vh;
+
+    @media (max-width: $display-lg-max) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__title {
+        margin-top: 12vh;
+
+        @media (max-width: $display-xxl-max) {
+            margin-top: 7vh;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: $display-sm-max) {
+            font-size: 38px;
+        }
+    }
+
+    &__subtitle {
+        @media (max-width: $display-xxl-max) {
+            font-size: 18px;
+        }
+
+        @media (max-width: $display-lg-max) {
+            & br {
+                display: none;
+            }
+
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: $display-lg-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        width: 50%;
+
+        @media (max-width: $display-lg-max) {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        &:first-child {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 20%;
+                right: -3%;
+                width: 247px;
+                height: 47px;
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='247' height='47' viewBox='0 0 247 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.37' d='M246 41.3299C112.088 67.1402 156.11 -22.7031 1 7.15601' stroke='%23E6E6E6' stroke-width='1.5' stroke-dasharray='9 4'/%3E%3C/svg%3E%0A");
+
+                @media (max-width: $display-lg-max) {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: -43%;
+                left: 25%;
+                width: 465px;
+                height: 64px;
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='465' height='64' viewBox='0 0 465 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.37' d='M1.5 63.5C22 32.5 74 5.93359 179.5 15C285 24.0664 363.5 69 464.5 1' stroke='%23E6E6E6' stroke-width='1.5' stroke-dasharray='9 4'/%3E%3C/svg%3E");
+
+                @media (max-width: $display-lg-max) {
+                    display: none;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                top: 9%;
+                right: -16%;
+                width: 256px;
+                height: 41px;
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='256' height='41' viewBox='0 0 256 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.37' d='M255 34.9787C120.193 60.6914 157.148 -22.209 1.00001 7.53705' stroke='%23E6E6E6' stroke-width='1.5' stroke-dasharray='9 4'/%3E%3C/svg%3E");
+
+                @media (max-width: $display-lg-max) {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            padding-top: 24px;
+
+            @media (max-width: $display-lg-max) {
+                padding: 0;
+            }
+        }
+
+        &:nth-child(1n+3) {
+            padding-left: 50px;
+            margin-top: 100px;
+
+            @media (max-width: $display-xxl-max) {
+                margin-top: 40px;
+            }
+
+            @media (max-width: $display-lg-max) {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    &__picture {
+        position: relative;
+        flex-shrink: 0;
+        max-width: 195px;
+        max-height: 130px;
+        margin-right: 32px;
+
+        @media (max-width: $display-xxl-max) {
+            align-items: flex-start;
+            max-width: 150px;
+        }
+
+        @media (max-width: $display-lg-max) {
+            display: flex;
+            justify-content: center;
+            max-width: none;
+            max-height: none;
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        &::after {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            content: "";
+            border: solid 2px #fff;
+
+            @media (max-width: $display-xxl-max) {
+                height: 77%;
+            }
+
+            @media (max-width: $display-lg-max) {
+                display: none;
+            }
+        }
+    }
+
+    &__photo {
+        position: relative;
+        z-index: 2;
+        max-width: 195px;
+
+        @media (max-width: $display-lg-max) {
+            max-width: 300px;
+        }
+    }
+
+    &__text {
+        margin: 0;
+
+        @media (max-width: $display-xxl-max) {
+            font-size: 13px;
+
+            & br {
+                display: none;
+            }
+        }
+
+        @media (max-width: $display-lg-max) {
+            text-align: center;
+        }
+    }
+
+    &__number {
+        @include subtitle;
+
+        display: flex;
+        align-items: flex-end;
+        max-height: 130px;
+        margin-right: 8px;
+        font-size: 36px;
+
+        @media (max-width: $display-xxl-max) {
+            align-items: center;
+        }
+
+        @media (max-width: $display-lg-max) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        max-width: 300px;
+    }
+}
+
+// slider-advantages
+
+.advantages__slider {
+    &.slick-initialized {
+        position: relative;
+        flex-direction: row;
+
+        & .slick-track {
+            display: flex;
+        }
+
+        & .slick-list {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        & .slick-slide {
+            margin: 0 10px;
+        }
+
+        & .slick-dots {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 10px 0 15px;
+
+            & button {
+                width: 12px;
+                height: 12px;
+                padding: 0;
+                font-size: 0;
+                cursor: pointer;
+                background-color: transparent;
+                border: 1px solid #fff;
+                border-radius: 100%;
+            }
+
+            & .slick-active button {
+                background-color: #fff;
+            }
+
+            & li + li {
+                margin-left: 10px;
+            }
+        }
+    }
+}
