@@ -157,12 +157,13 @@
     &__subtitle {
         width: 100%;
         max-width: 270px;
+        margin: 0 auto;
         text-align: center;
     }
 
     &__text {
         max-width: 270px;
-        margin: 0;
+        margin: 0 auto;
         text-align: center;
     }
 }
